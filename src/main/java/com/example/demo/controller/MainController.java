@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.form.PersonForm;
 import com.example.demo.model.Person;
@@ -32,7 +33,7 @@ public class MainController {
 	@Value("${error.message}")
 	private String errorMessage;
 
-	@GetMapping(value = { "/", "/index" })
+	@GetMapping(value = {"/index" })
 	public String index(Model model) {
 
 		model.addAttribute("message", message);
